@@ -1,8 +1,8 @@
 import { getCustomProperty, incrementCustomProperty, setCustomProperty } from "./updateCustomProperty.js"
 
-const dinoEl = document.querySelector('[data-dino')
-const JUMP_SPEED = .45;
-const GRAVITY = .0015;
+const dinoEl = document.querySelector('[data-dino]')
+const JUMP_SPEED = 0.45;
+const GRAVITY = 0.0015;
 const DINO_FRAME_COUNT = 2;
 const FRAME_TIME = 100
 
@@ -25,6 +25,10 @@ export function updateDino(delta, speedScale){
 	handleRun(delta, speedScale)
 	handleJump(delta)
 
+}
+
+export function getDinoRect(){
+	return dinoEl.getBoundingClientRect()
 }
 
 function handleRun(delta, speedScale){
