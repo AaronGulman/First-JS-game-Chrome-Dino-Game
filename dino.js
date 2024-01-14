@@ -32,18 +32,18 @@ export function getDinoRect(){
 }
 
 export function setDinoLose(){
-		dinoEl.src = `./assets/dino-lose.png`
+		dinoEl.src = `assets/dino-lose.png`
 }
 
 function handleRun(delta, speedScale){
 	if(isJumping){
-		dinoEl.src = `./assets/dino-stationary.png`
+		dinoEl.src = `assets/dino-stationary.png`
 		return
 	}
 
 	if(currentFrameTime >= FRAME_TIME){
 		dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
-		dinoEl.src = `./assets/dino-run-${dinoFrame}.png`
+		dinoEl.src = `assets/dino-run-${dinoFrame}.png`
 		currentFrameTime -= FRAME_TIME
 		
 	}
